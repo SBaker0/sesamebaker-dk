@@ -202,7 +202,8 @@ html.short .traits{display:none}
 @media(max-width:480px){.brand-grid{grid-template-columns:minmax(0,1fr);row-gap:32px}}
 
 /* credentials */
-.creds{display:grid;grid-template-columns:repeat(auto-fill,minmax(178px,1fr));gap:14px}
+.creds{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
+@media(max-width:800px){.creds{grid-template-columns:repeat(2,minmax(0,1fr))}}
 .creds .card{display:flex;flex-direction:column;gap:6px;min-height:150px;min-width:0;padding:16px 16px 14px;background:#fff;border:1px solid var(--line);border-top:3px solid var(--line);border-radius:8px;color:inherit;text-decoration:none;transition:border-color .2s,transform .2s}
 .creds .card.has{border-top-color:var(--gold)}
 .creds .card.has:hover{border-color:var(--gold);transform:translateY(-2px)}
@@ -353,7 +354,7 @@ html.short main{display:flex;flex-direction:column}
 html.short main>*{order:3}
 html.short main>.quickbar{order:0}
 html.short main>#career{order:2;background:var(--bg-2)}
-html.short #career .indent{display:none}
+html.short #career .indent,html.short .cred-block{display:none}
 html.short .hero .sub,html.short main>.brands,html.short #contact .note,html.short #contact .open>p:not(.label){display:none}
 html.short .cases2 .cb p{display:none}
 html.short .cases2 article{padding-block:22px}
@@ -527,7 +528,7 @@ footer .priv{display:block;font-size:.78rem;opacity:.7;margin-top:4px}
         <li><span class="yr">2015-2017</span><span class="role">HR Business Partner, Senior Global Talent Manager</span><span class="org">The LEGO Group</span></li>
         <li><span class="yr">2008-2015</span><span class="role">HR Business Partner | Head of HR Service Desk &amp; International Mobility</span><span class="org">Siemens Wind Power</span></li>
       </ol></div>
-      <div class="indent" style="margin-top:64px">
+      <div class="cred-block" style="margin-top:64px">
         <p class="label" style="margin-bottom:10px">Selected credentials</p>
         <div class="creds">
           <a class="card has" href="https://xpro.mit.edu/certificate/af704419-b644-4165-a042-2deef87b584f/" target="_blank" rel="noopener" aria-label="System Thinking, view certificate"><span class="iss">MIT xPRO</span><span class="nm">System Thinking</span><span class="ft"><span>2026</span><span class="v">View</span></span></a>
@@ -540,7 +541,7 @@ footer .priv{display:block;font-size:.78rem;opacity:.7;margin-top:4px}
           <div class="card"><span class="iss">Thomas International</span><span class="nm">DISC and GIA Certified</span><span class="ft"><span></span></span></div>
         </div>
       </div>
-      <div class="indent outside">
+      <div class="outside">
         <p class="label" style="margin-bottom:12px">Outside work, I love</p>
         <ul class="interests"><li>The arts</li><li>Reading</li><li>Live music</li><li>Nature</li><li>Architecture</li></ul>
         <p class="fav">Favourite places: Louisiana Museum of Modern Art, where art, architecture and nature meet, and Glyptoteket.</p>
