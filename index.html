@@ -392,8 +392,12 @@ footer .priv{display:block;font-size:.78rem;opacity:.7;margin-top:4px}
 .hero{align-items:start;row-gap:clamp(32px,4vw,52px)}
 .hero-top{grid-column:1/-1;display:flex;flex-direction:column;gap:24px}
 .hero-top .line{max-width:none;font-size:clamp(1.9rem,3.5vw,3.05rem);text-wrap:balance}
-.hero-text{align-self:start}
-.hero-photo{align-items:flex-end;padding-top:6px;align-self:start}
+.hero-text{align-self:stretch;gap:22px}
+.hero-text .sub+.sub{margin-top:-8px}
+@media(min-width:901px){.hero-photo img{width:min(306px,100%)}}
+.hero-text .actions{margin-top:auto}
+.hero-photo{align-items:flex-end;padding-top:4px;align-self:start}
+.hero-facts{margin-top:0}
 @media(max-width:900px){.hero-top{order:0}}
 </style>
 
@@ -423,7 +427,7 @@ footer .priv{display:block;font-size:.78rem;opacity:.7;margin-top:4px}
       </div>
       <div class="hero-text">
         <p class="sub">I've spent over 15 years across the full HR landscape, from business partnering and talent development to executive leadership and global transformation, at Siemens, LEGO, Carlsberg and Lantmännen Unibake, as well as a tech scale-up and a&nbsp;start&#8209;up.</p>
-        <p class="sub">I see the bigger picture, ask the questions others avoid and get to the heart of what needs to change. I connect people, processes and business priorities, turning complex challenges into solutions that work in real life, not just on a slide. Structure without rigidity, challenge without ego, and the determination to see things through.</p>
+        <p class="sub">I see the bigger picture, ask the questions that need asking and get to the heart of what needs to change. I connect people, processes and business priorities, turning complex challenges into solutions that work in real life, not just on a slide. I bring structure without rigidity, challenge without ego, and the determination to see things through.</p>
         <div class="actions">
           <a class="btn primary" data-book href="https://cal.com/sesame-baker/lets-talk" target="_blank" rel="noopener">Let's talk</a>
           <span class="cvs"><a class="link" href="Sesame-Baker-CV.pdf" target="_blank" rel="noopener">One-page CV</a><a class="link" href="Sesame-Baker-CV-full.pdf" target="_blank" rel="noopener">Full CV</a></span>
