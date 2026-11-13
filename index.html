@@ -375,6 +375,14 @@ html.short .brand-grid .lg{display:none}
 html.short .outside{display:none}
 .outside .fav{margin-top:12px;font-size:.92rem;color:var(--soft)}
 footer .priv{display:block;font-size:.78rem;opacity:.7;margin-top:4px}
+
+/* brand grid tidy (Nov 2026): one-line names, everything top-aligned */
+.brand-grid .lg{height:44px;margin-bottom:14px}
+.brand-grid .lg img{max-height:36px;max-width:132px}
+.brand-grid .bn{font-size:clamp(1.05rem,1.55vw,1.3rem);letter-spacing:.07em;align-self:start;align-items:flex-start;white-space:nowrap}
+.brand-grid .bn-prev{justify-content:flex-start}
+.brand-grid .br{align-self:start;margin-top:6px}
+@media(max-width:900px){.brand-grid .bn{white-space:normal}}
 </style>
 
 <header>
