@@ -399,6 +399,11 @@ footer .priv{display:block;font-size:.78rem;opacity:.7;margin-top:4px}
 .hero-photo{align-items:flex-end;padding-top:4px;align-self:start}
 .hero-facts{margin-top:0}
 @media(max-width:900px){.hero-top{order:0}}
+
+/* top recommendation spans the full width, like the quotes below */
+#words .feature blockquote,#words .feature figcaption{grid-column:1/-1}
+#words .feature blockquote{max-width:none;text-wrap:balance}
+@media(min-width:801px){#words .refs.indent{margin-left:0}}
 </style>
 
 <header>
