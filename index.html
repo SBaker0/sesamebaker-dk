@@ -360,7 +360,7 @@ html.short main>*{order:3}
 html.short main>.quickbar{order:0}
 html.short main>#career{order:2;background:var(--bg-2)}
 html.short #career .indent,html.short .cred-block{display:none}
-html.short .hero .sub,html.short main>.brands,html.short #contact .note,html.short #contact .open>p:not(.label){display:none}
+html.short .hero .sub+.sub,html.short main>.brands,html.short #contact .note,html.short #contact .open>p:not(.label){display:none}
 html.short .cases2 .cb p{display:none}
 html.short .cases2 article{padding-block:22px}
 html.short section.s,html.short .brands{padding-block:clamp(40px,5vw,64px)}
@@ -404,6 +404,10 @@ footer .priv{display:block;font-size:.78rem;opacity:.7;margin-top:4px}
 #words .feature blockquote,#words .feature figcaption{grid-column:1/-1}
 #words .feature blockquote{max-width:none;text-wrap:balance}
 @media(min-width:801px){#words .refs.indent{margin-left:0}}
+
+/* 60-second version: compact top section */
+html.short .hero-text .actions{margin-top:8px}
+@media(min-width:901px){html.short .hero-photo img{width:min(220px,100%)}html.short .hero-photo .nm{font-size:clamp(1.7rem,2.6vw,2.3rem)}}
 </style>
 
 <header>
@@ -431,7 +435,7 @@ footer .priv{display:block;font-size:.78rem;opacity:.7;margin-top:4px}
         <p class="line">I bring clarity to complexity, challenge thinking and make things happen, bringing people with me.</p>
       </div>
       <div class="hero-text">
-        <p class="sub">I've spent over 15 years across the full HR landscape, from business partnering and talent development to executive leadership and global transformation, at Siemens, LEGO, Carlsberg and Lantmännen Unibake, as well as a tech scale-up and a&nbsp;start&#8209;up.</p>
+        <p class="sub">I've spent over 15 years across the full HR landscape, from business partnering and talent development to executive leadership and global transformation, at organisations including Siemens, LEGO, Carlsberg and Lantmännen Unibake, as well as a tech scale-up and a&nbsp;start&#8209;up.</p>
         <p class="sub">I see the bigger picture, ask the questions that need asking and get to the heart of what needs to change. I connect people, processes and business priorities, turning complex challenges into solutions that work in real life, not just on a slide. I bring structure without rigidity, challenge without ego, and the determination to see things through.</p>
         <div class="actions">
           <a class="btn primary" data-book href="https://cal.com/sesame-baker/lets-talk" target="_blank" rel="noopener">Let's talk</a>
