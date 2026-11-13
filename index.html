@@ -77,9 +77,6 @@ header{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:rgb
 .br .r+.r{margin-top:4px}
 .br .r::before{content:"";position:absolute;left:0;top:.62em;width:6px;height:6px;border-radius:50%;background:var(--gold)}
 
-.creds .cert{text-decoration:none;color:inherit}
-.creds .cert small{white-space:nowrap;margin-left:8px;font-size:.75rem;font-weight:500;color:var(--gold-deep);border-bottom:1px solid var(--gold)}
-.creds .cert:hover small{color:var(--ink)}
 @media(max-width:900px){.motto{margin-top:10px;font-size:.88rem}}
 .actions{display:flex;flex-wrap:wrap;gap:12px;align-items:center}
 .btn{display:inline-flex;align-items:center;gap:10px;padding:13px 24px;border-radius:999px;font:inherit;font-size:.95rem;font-weight:500;text-decoration:none;border:1px solid var(--ink);color:var(--ink);background:none;cursor:pointer;transition:background .2s,color .2s}
@@ -205,10 +202,16 @@ html.short .traits{display:none}
 @media(max-width:480px){.brand-grid{grid-template-columns:minmax(0,1fr);row-gap:32px}}
 
 /* credentials */
-.creds{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 48px}
-.creds div{display:flex;justify-content:space-between;gap:16px;padding-block:14px;border-bottom:1px solid var(--line)}
-.creds span{color:var(--soft);font-variant-numeric:tabular-nums;flex:none}
-@media(max-width:800px){.creds{grid-template-columns:minmax(0,1fr)}}
+.creds{display:grid;grid-template-columns:repeat(auto-fill,minmax(178px,1fr));gap:14px}
+.creds .card{display:flex;flex-direction:column;gap:6px;min-height:150px;min-width:0;padding:16px 16px 14px;background:#fff;border:1px solid var(--line);border-top:3px solid var(--line);border-radius:8px;color:inherit;text-decoration:none;transition:border-color .2s,transform .2s}
+.creds .card.has{border-top-color:var(--gold)}
+.creds .card.has:hover{border-color:var(--gold);transform:translateY(-2px)}
+.creds .iss{font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;color:var(--soft)}
+.creds .nm{font-weight:500;line-height:1.3;font-size:.98rem}
+.creds .ft{margin-top:auto;display:flex;justify-content:space-between;padding-top:10px;font-size:.82rem;color:var(--soft);font-variant-numeric:tabular-nums}
+.creds .v{font-weight:500;color:var(--gold-deep)}
+.creds .v::after{content:" \2197"}
+@media(max-width:480px){.creds{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.creds .card{min-height:130px;padding:14px 12px 12px}.creds .nm{font-size:.9rem}}
 
 /* contact */
 .contact{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:24px;align-items:end}
@@ -527,14 +530,14 @@ footer .priv{display:block;font-size:.78rem;opacity:.7;margin-top:4px}
       <div class="indent" style="margin-top:64px">
         <p class="label" style="margin-bottom:10px">Selected credentials</p>
         <div class="creds">
-          <div><a class="cert" href="https://xpro.mit.edu/certificate/af704419-b644-4165-a042-2deef87b584f/" target="_blank" rel="noopener">System Thinking, MIT xPRO <small>View certificate</small></a><span>2026</span></div>
-          <div><a class="cert" href="pspo-certificate.pdf" target="_blank" rel="noopener">Professional Scrum Product Owner I, Scrum.org <small>View certificate</small></a><span>2026</span></div>
-          <div><a class="cert" href="cti-coach-training-certificate.jpg" target="_blank" rel="noopener">Co-Active Professional Coach, CTI (104 hours, ICF-accredited) <small>View certificate</small></a><span>2024</span></div>
-          <div>Fundamentals of AI in HR<span>2024</span></div>
-          <div><a class="cert" href="cpcm-certificate.pdf" target="_blank" rel="noopener">Certified Professional Change Management (CPCM) <small>View certificate</small></a><span>2023</span></div>
-          <div><a class="cert" href="hogan-certificate.jpg" target="_blank" rel="noopener">Hogan Assessment Certification <small>View certificate</small></a><span>2018</span></div>
-          <div>Situational Leadership (SLX) Train the Trainer, Blanchard<span>2017</span></div>
-          <div>DISC and GIA Certified, Thomas International<span></span></div>
+          <a class="card has" href="https://xpro.mit.edu/certificate/af704419-b644-4165-a042-2deef87b584f/" target="_blank" rel="noopener" aria-label="System Thinking, view certificate"><span class="iss">MIT xPRO</span><span class="nm">System Thinking</span><span class="ft"><span>2026</span><span class="v">View</span></span></a>
+          <a class="card has" href="pspo-certificate.pdf" target="_blank" rel="noopener" aria-label="Professional Scrum Product Owner I, view certificate"><span class="iss">Scrum.org</span><span class="nm">Professional Scrum Product Owner I</span><span class="ft"><span>2026</span><span class="v">View</span></span></a>
+          <a class="card has" href="cti-coach-training-certificate.jpg" target="_blank" rel="noopener" aria-label="Co-Active Professional Coach (104 hours), view certificate"><span class="iss">CTI · ICF-accredited</span><span class="nm">Co-Active Professional Coach (104 hours)</span><span class="ft"><span>2024</span><span class="v">View</span></span></a>
+          <div class="card"><span class="iss">Course</span><span class="nm">Fundamentals of AI in HR</span><span class="ft"><span>2024</span></span></div>
+          <a class="card has" href="cpcm-certificate.pdf" target="_blank" rel="noopener" aria-label="Certified Professional Change Management (CPCM), view certificate"><span class="iss">Change management</span><span class="nm">Certified Professional Change Management (CPCM)</span><span class="ft"><span>2023</span><span class="v">View</span></span></a>
+          <a class="card has" href="hogan-certificate.jpg" target="_blank" rel="noopener" aria-label="Hogan Assessment Certification, view certificate"><span class="iss">Hogan</span><span class="nm">Hogan Assessment Certification</span><span class="ft"><span>2018</span><span class="v">View</span></span></a>
+          <div class="card"><span class="iss">Blanchard</span><span class="nm">Situational Leadership (SLX) Train the Trainer</span><span class="ft"><span>2017</span></span></div>
+          <div class="card"><span class="iss">Thomas International</span><span class="nm">DISC and GIA Certified</span><span class="ft"><span></span></span></div>
         </div>
       </div>
       <div class="indent outside">
