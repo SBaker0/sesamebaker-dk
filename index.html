@@ -364,6 +364,7 @@ html.short .brand-grid .lg{display:none}
 .interests li::before{content:"";position:absolute;left:13px;top:50%;width:6px;height:6px;margin-top:-3px;border-radius:50%;background:var(--gold)}
 html.short .outside{display:none}
 .outside .fav{margin-top:12px;font-size:.92rem;color:var(--soft)}
+footer .priv{display:block;font-size:.78rem;opacity:.7;margin-top:4px}
 </style>
 
 <header>
@@ -390,7 +391,7 @@ html.short .outside{display:none}
         <p class="sub">What I enjoy most is getting to the heart of a challenge, understanding what really matters to the business and finding practical solutions that make a difference.</p>
         <p class="sub">I'm strategic in how I think, hands-on in how I work, and direct and collaborative in how I communicate. I believe in asking the questions that need asking, staying curious, listening to different perspectives and following through on what we set out to achieve.</p>
         <div class="actions">
-          <a class="btn primary" data-book href="#contact">Let's talk</a>
+          <a class="btn primary" data-book href="https://cal.com/sesame-baker/lets-talk" target="_blank" rel="noopener">Let's talk</a>
           <a class="btn" href="#contact">Get in touch</a>
           <a class="link" href="Sesame-Baker-CV.pdf" target="_blank" rel="noopener">Download CV</a>
         </div>
@@ -554,7 +555,7 @@ html.short .outside{display:none}
         </div>
         <p class="mail"><span id="mail">hello@sesamebaker.com</span><button class="copy" type="button" id="copy">Copy</button></p>
         <div class="actions">
-          <a class="btn primary" data-book href="mailto:hello@sesamebaker.com?subject=Booking%20a%20call">Let's talk</a>
+          <a class="btn primary" data-book href="https://cal.com/sesame-baker/lets-talk" target="_blank" rel="noopener">Let's talk</a>
           <a class="btn" href="https://www.linkedin.com/in/sesamebaker" target="_blank" rel="noopener">LinkedIn</a>
           <a class="btn" href="Sesame-Baker-CV.pdf" target="_blank" rel="noopener">Download CV</a>
         </div>
@@ -563,7 +564,7 @@ html.short .outside{display:none}
   </section>
 </main>
 
-<footer><div class="wrap"><span>Sesame Turquoise Baker · Copenhagen</span><span class="fl"><a href="https://www.linkedin.com/in/sesamebaker" target="_blank" rel="noopener">LinkedIn</a><a href="Sesame-Baker-CV.pdf" target="_blank" rel="noopener">CV</a><span>sesamebaker.dk</span></span></div></footer>
+<footer><div class="wrap"><span>Sesame Turquoise Baker · Copenhagen<small class="priv">Cookie-free, anonymous visitor statistics.</small></span><span class="fl"><a href="https://www.linkedin.com/in/sesamebaker" target="_blank" rel="noopener">LinkedIn</a><a href="Sesame-Baker-CV.pdf" target="_blank" rel="noopener">CV</a><span>sesamebaker.dk</span></span></div></footer>
 
 
 <button class="ai-open" id="aiOpen" type="button" aria-expanded="false" aria-controls="aiPanel">
@@ -695,3 +696,4 @@ const ASSISTANT_URL = "https://sesame-assistant.muddy-sun-d4d6.workers.dev";
   form.addEventListener("submit",e=>{e.preventDefault();ask(input.value);});
 })();
 </script>
+<!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "e9023863ce41401e932185046b94cecd"}'></script><!-- End Cloudflare Web Analytics -->
