@@ -421,6 +421,13 @@ section.s,.brands{padding-block:clamp(48px,6vw,84px)}
 .career .scope{grid-column:3/9;font-size:.88rem;color:var(--soft);margin-top:2px}
 @media(max-width:800px){.career .scope{grid-column:1/-1}}
 .contact .setup b{font-weight:inherit}@media(max-width:600px){.contact .setup span{display:none}.contact .setup b{display:block;width:100%}}
+.career li .tl-lg{grid-column:3/4;grid-row:1/span 2;align-self:start;margin-top:5px;width:84px;height:auto;display:flex;align-items:flex-start;justify-content:flex-start;padding:0}
+.career li .tl-lg img{max-width:100%;max-height:30px;mix-blend-mode:multiply;width:auto;height:auto;object-fit:contain}
+.career li .tl-lg~.role,.career li .tl-lg~.scope{grid-column:4/10;padding-left:48px}.career li .tl-lg~.org{grid-column:10/13}
+@media(max-width:800px){.career li .tl-lg~.role,.career li .tl-lg~.scope{padding-left:0}.career li .tl-lg{grid-column:1/-1;grid-row:auto;width:84px;height:42px;margin:4px 0 2px}.career li .tl-lg~.role,.career li .tl-lg~.scope,.career li .tl-lg~.org{grid-column:1/-1}}
+@media(min-width:801px){.career li:has(.tl-lg){padding-top:24px;padding-bottom:24px}.career li:has(.tl-lg)::before{top:31px}}
+.career .role{font-size:clamp(1rem,1.2vw,1.1rem);font-weight:500;letter-spacing:0;line-height:1.4}
+.career .scope{font-size:.85rem}
 </style>
 
 <header>
@@ -572,13 +579,13 @@ section.s,.brands{padding-block:clamp(48px,6vw,84px)}
     <div class="wrap">
       <div class="s-head"><span class="label">Career</span><h2>The path so far.</h2></div>
       <div class="career"><ol>
-        <li><span class="yr">2024-2026</span><span class="role">Global Head of HR Transformation</span><span class="org">YNV Group</span><span class="scope">Investment group (tech, finance, real estate) · ~6,000 employees</span></li>
-        <li><span class="yr">2022-2024</span><span class="role">Chief People Officer</span><span class="org">Uniscale (formerly Patientsky)</span><span class="scope">Healthcare SaaS (~200 employees), then PaaS start-up (~60)</span></li>
-        <li><span class="yr">2021-2022</span><span class="role">Global Talent Development Director</span><span class="org">Lantmännen Unibake</span><span class="scope">Bakery and food manufacturing · ~6,000 employees</span></li>
-        <li><span class="yr">2019-2020</span><span class="role">Senior Global Talent Manager</span><span class="org">Carlsberg Group</span><span class="scope">Global brewing and beverages · ~42,000 employees</span></li>
-        <li><span class="yr">2017-2019</span><span class="role">Global HR Development Manager</span><span class="org">TAJCO Group</span><span class="scope">Automotive supplier · ~1,200 employees</span></li>
-        <li><span class="yr">2015-2017</span><span class="role">Global Talent Manager, Executive HR | Senior Global Talent Manager, Strategic HR Partner</span><span class="org">The LEGO Group</span><span class="scope">Global toy manufacturing · ~19,000 employees</span></li>
-        <li><span class="yr">2008-2015</span><span class="role">HR Business Partner | Head of HR Service Desk &amp; International Mobility</span><span class="org">Siemens Wind Power</span><span class="scope">Wind energy · ~7,000 employees in Denmark</span></li>
+        <li><span class="yr">2024-2026</span><span class="tl-lg" data-logo="YNV Group logo"></span><span class="role">Global Head of HR Transformation</span><span class="org">YNV Group</span><span class="scope">Investment group (tech, finance, real estate) · ~6,000 employees</span></li>
+        <li><span class="yr">2022-2024</span><span class="tl-lg" data-logo="Uniscale logo"></span><span class="role">Chief People Officer</span><span class="org">Uniscale (formerly Patientsky)</span><span class="scope">Healthcare SaaS (~200 employees), then PaaS start-up (~60)</span></li>
+        <li><span class="yr">2021-2022</span><span class="tl-lg" data-logo="Lantmännen Unibake logo"></span><span class="role">Global Talent Development Director</span><span class="org">Lantmännen Unibake</span><span class="scope">Bakery and food manufacturing · ~6,000 employees</span></li>
+        <li><span class="yr">2019-2020</span><span class="tl-lg" data-logo="Carlsberg logo"></span><span class="role">Senior Global Talent Manager</span><span class="org">Carlsberg Group</span><span class="scope">Global brewing and beverages · ~42,000 employees</span></li>
+        <li><span class="yr">2017-2019</span><span class="tl-lg" data-logo="TAJCO logo"></span><span class="role">Global HR Development Manager</span><span class="org">TAJCO Group</span><span class="scope">Automotive supplier · ~1,200 employees</span></li>
+        <li><span class="yr">2015-2017</span><span class="tl-lg" data-logo="LEGO logo"></span><span class="role">Global Talent Manager, Executive HR | Senior Global Talent Manager, Strategic HR Partner</span><span class="org">The LEGO Group</span><span class="scope">Global toy manufacturing · ~19,000 employees</span></li>
+        <li><span class="yr">2008-2015</span><span class="tl-lg" data-logo="Siemens Wind Power logo"></span><span class="role">HR Business Partner | Head of HR Service Desk &amp; International Mobility</span><span class="org">Siemens Wind Power</span><span class="scope">Wind energy · ~7,000 employees in Denmark</span></li>
       </ol></div>
       <div class="cred-block" id="credentials" style="margin-top:64px;scroll-margin-top:96px">
         <h3 class="learn-h">Always curious. Always learning.</h3>
@@ -759,3 +766,5 @@ const ASSISTANT_URL = "https://sesame-assistant.muddy-sun-d4d6.workers.dev";
 })();
 </script>
 <!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "e9023863ce41401e932185046b94cecd"}'></script><!-- End Cloudflare Web Analytics -->
+
+<script>document.querySelectorAll(".tl-lg[data-logo]").forEach(function(b){var i=document.querySelector('img[alt="'+b.dataset.logo+'"]');if(i){var c=i.cloneNode();c.alt="";b.appendChild(c);}else{b.remove();}});</script>
