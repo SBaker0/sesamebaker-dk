@@ -360,7 +360,7 @@ html.short main>*{order:3}
 html.short main>.quickbar{order:0}
 html.short main>#career{order:2;background:var(--bg-2)}
 html.short #career .indent,html.short .cred-block{display:none}
-html.short main>.brands,html.short #contact .note,html.short #contact .open>p:not(.label){display:none}
+html.short main>.brands,html.short #contact .note,html.short #contact .open>p:not(.label):not(.setup){display:none}
 html.short .cases2 .cb p{display:none}
 html.short .cases2 article{padding-block:22px}
 html.short section.s,html.short .brands{padding-block:clamp(40px,5vw,64px)}
@@ -420,6 +420,7 @@ section.s,.brands{padding-block:clamp(48px,6vw,84px)}
 .contact .setup{margin:10px 0 0;font-weight:500;color:#fff;font-size:.95rem;display:flex;flex-wrap:wrap;gap:6px 10px}.contact .setup span{opacity:.6}
 .career .scope{grid-column:3/9;font-size:.88rem;color:var(--soft);margin-top:2px}
 @media(max-width:800px){.career .scope{grid-column:1/-1}}
+.contact .setup b{font-weight:inherit}@media(max-width:600px){.contact .setup span{display:none}.contact .setup b{display:block;width:100%}}
 </style>
 
 <header>
@@ -444,7 +445,7 @@ section.s,.brands{padding-block:clamp(48px,6vw,84px)}
     <div class="hero">
       <div class="hero-top">
         <a class="status" href="#contact"><span class="dot" aria-hidden="true"></span>Open to permanent and interim leadership roles</a>
-        <p class="line">People &amp; Culture leader<br><span style="color:var(--soft)">HR&nbsp;transformation, talent and&nbsp;leadership</span></p>
+        <p class="line">People &amp; Culture leader<br><span style="color:var(--soft)">HR business partnering, transformation, talent and&nbsp;leadership</span></p>
       </div>
       <div class="hero-text">
         <p class="sub">I build and develop HR functions that support a growing and evolving business, and the leaders who carry change through. I cut through complexity and get things done, most recently as Global Head of HR Transformation and as Chief People Officer of a start-up, and before that at Siemens, LEGO, Carlsberg and Lantmännen&nbsp;Unibake.</p>
@@ -488,7 +489,7 @@ section.s,.brands{padding-block:clamp(48px,6vw,84px)}
         <article><div class="cm"><strong>NOK 850m+</strong><span>software business sale</span></div><div class="cb"><span class="when">Uniscale (formerly Patientsky) · 2022-24</span><h3>Building HR from the ground up, through growth and a sale</h3><p>As CPO, I advised the CEO and leadership team as the company moved from R&amp;D to a commercial organisation. I built HR from the ground up: contracts, job architecture, pay and bonus reviews, onboarding, handbook, training and performance management. I also built a sales hub in Barcelona and a customer experience team in Copenhagen. For the sale of the software business to EG, I was part of the M&amp;A team, ensuring accurate and timely People data and documentation throughout.</p></div></article>
         <article><div class="cm"><strong>~500</strong><span>leaders in the programme</span></div><div class="cb"><span class="when">Lantmännen Unibake · 2021-22</span><h3>Strengthening talent and leadership across 12 countries</h3><p>Working with the CHRO, I led global talent reviews and succession planning, developed executive talent dashboards and competency frameworks, and facilitated team development days. I also designed and rolled out a Leadership Fundamentals programme for around 500 leaders, covering essential HR processes, feedback, coaching and DEI. I trained around 40 HR trainers to deliver it locally, and 93% of participants rated it Excellent or Very Good.</p></div></article>
         <article><div class="cm"><strong>€1m</strong><span>Leadership Academy</span></div><div class="cb"><span class="when">Carlsberg Group · 2019-20</span><h3>A global Leadership Academy and Carlsberg's first DEI strategy</h3><p>I managed the Global Leadership Academy, collaborating with external providers to develop and deliver programmes for leaders at all levels, including the Executive Leadership Team and a London Business School programme for senior executives, with programmes averaging 4.3/5 satisfaction. I also co-created the Carlsberg Leadership Framework, revised company values and Carlsberg's first Diversity, Equity &amp; Inclusion strategy and roadmap.</p></div></article>
-        <article><div class="cm"><strong>7,000</strong><span>employees served</span></div><div class="cb"><span class="when">Siemens Wind Power · 2012-15</span><h3>My first HR Shared Services experience, from design to delivery</h3><p>I helped design and implement HR Shared Services before going on to lead AskHR, supporting around 7,000 employees across multiple sites in Denmark. We handled approximately 3,500 queries a month, achieved 8/10 customer satisfaction and received a "World Class" rating from Siemens HQ for resolving over 90% of queries first time. I was also the Customer Satisfaction Lead for Northwest Europe.</p></div></article>
+        <article><div class="cm"><strong>7,000</strong><span>employees served</span></div><div class="cb"><span class="when">Siemens Wind Power · 2012-15</span><h3>From the HR Shared Services project team to running AskHR</h3><p>I was part of the project team that implemented HR Shared Services, then went on to lead AskHR, supporting around 7,000 employees across multiple sites in Denmark. We handled approximately 3,500 queries a month, achieved 8/10 customer satisfaction and received a "World Class" rating from Siemens HQ for resolving over 90% of queries first time. I was also the Customer Satisfaction Lead for Northwest Europe.</p></div></article>
       </div>
     </div>
   </section>
@@ -529,7 +530,7 @@ section.s,.brands{padding-block:clamp(48px,6vw,84px)}
         <div class="view-text">
           <span class="label">How I work</span>
           <h2>I've worked across HR. I know how the pieces fit together.</h2>
-          <p class="view-p">From talent development and business partnering to operations, systems and global transformation, I've seen how decisions in one area affect another. That perspective helps me ask better questions, challenge assumptions and find solutions that work for the business and its people.</p>
+          <p class="view-p">From talent development and business partnering to operations, systems and global transformation, I've seen how decisions in one area affect another. HR decisions rarely exist in isolation. A leadership challenge may have its roots in unclear accountability. A talent issue may be linked to organisational design. A new system won't solve a broken process. That perspective helps me ask better questions, challenge assumptions and find solutions that work for the business and its people.</p>
         </div>
         <figure class="venn">
         <svg viewBox="0 0 760 560" role="img" aria-labelledby="vennT">
@@ -609,8 +610,9 @@ section.s,.brands{padding-block:clamp(48px,6vw,84px)}
         <div class="note"><p>I enjoy working with people and tackling challenges. You can expect honest conversations, clear thinking and a practical approach. I listen, challenge when needed and believe in finding the best way forward together, having fun along the way.</p><p class="sig">Sesame</p></div>
         <div class="open">
           <p class="label"><span class="dot" aria-hidden="true"></span>Open to my next leadership challenge</p>
-          <p>I'm exploring permanent and interim leadership opportunities, including senior HR Business Partner roles, where I can bring my experience in HR Business Partnering, Talent Management, Leadership and HR Transformation. I'm also open to fixed-term assignments.</p>
-          <p class="setup">Available immediately<span>·</span>On-site, hybrid or remote<span>·</span>Happy to travel</p>
+          <p>I'm exploring permanent and interim senior HR leadership opportunities where I can make a meaningful contribution.</p>
+          <p>My experience spans People &amp; Culture leadership, strategic HR Business Partnering, Talent &amp; Leadership Development and HR Transformation. I'm particularly interested in roles where I can bring these perspectives together, tackle complex challenges and help organisations move forward.</p>
+          <p class="setup"><b>Available immediately</b><span>·</span><b>Based in Copenhagen</b><span>·</span><b>Open to on-site, hybrid and remote opportunities</b><span>·</span><b>Happy to travel</b></p>
         </div>
         <p class="mail"><span id="mail">hello@sesamebaker.com</span><button class="copy" type="button" id="copy">Copy</button></p>
         <div class="actions">
