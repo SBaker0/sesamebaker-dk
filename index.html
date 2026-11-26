@@ -731,6 +731,8 @@ function sel(){try{const r=document.createRange();r.selectNodeContents(document.
    Paste your Cloudflare Worker address between the quotes below.
    Leave it empty to show the preview mode. */
 const ASSISTANT_URL = "https://sesame-assistant.muddy-sun-d4d6.workers.dev";
+// Tags the owner's own questions in the private log (?me=sesame, ?me=claude, ?me=off). Stored only in this browser.
+var SB_ME="";try{var mp=new URLSearchParams(location.search).get("me");if(mp==="sesame"||mp==="claude"){localStorage.setItem("sb_me",mp);}else if(mp==="off"){localStorage.removeItem("sb_me");}SB_ME=localStorage.getItem("sb_me")||"";if(mp){var tn=document.createElement("div");tn.textContent=SB_ME?("Questions from this browser are now tagged as "+(SB_ME==="sesame"?"you":"Claude")+" in your log."):"Tag removed. Questions from this browser count as visitors.";tn.style.cssText="position:fixed;left:16px;bottom:16px;z-index:9999;background:#002FA7;color:#fff;font:500 14px/1.4 system-ui,sans-serif;padding:10px 14px;border-radius:10px;max-width:320px";document.body.appendChild(tn);setTimeout(function(){tn.remove()},5000);}}catch(e){}
 (function(){
   const $=id=>document.getElementById(id);
   const open=$("aiOpen"),panel=$("aiPanel"),log=$("aiLog"),form=$("aiForm"),input=$("aiInput"),send=$("aiSend"),chips=$("aiChips");
@@ -780,7 +782,7 @@ const ASSISTANT_URL = "https://sesame-assistant.muddy-sun-d4d6.workers.dev";
     let reply;
     if(!ASSISTANT_URL){ await new Promise(r=>setTimeout(r,500)); reply=T[L()].prev; }
     else{
-      try{const r=await fetch(ASSISTANT_URL,{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({messages:history.slice(-8)})});
+      try{const r=await fetch(ASSISTANT_URL,{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({messages:history.slice(-8),me:SB_ME})});
           const j=await r.json(); reply=j.reply||T[L()].err;}
       catch(e){reply=T[L()].err;}
     }
